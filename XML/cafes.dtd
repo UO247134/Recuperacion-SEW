@@ -1,0 +1,18 @@
+<!ELEMENT cafes (cafe+)>
+        <!ELEMENT cafe (nombre, especie, procedencia, preparaciones, extraccion)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT especie (#PCDATA)>
+        <!ELEMENT procedencia (#PCDATA)>
+        <!ELEMENT preparaciones (preparacion+)>
+        <!ELEMENT preparacion (#PCDATA)>
+        <!ATTLIST preparacion (Espresso | Cortado | Capuccino | Con leche | Latte macchiato
+                |Bombon| Americano| Moka| Vienes| Irlandes| Frappe| Arabigo)>
+
+        <!ELEMENT extraccion (tipoExtraccion)>
+        <!ELEMENT tipoExtraccion (tipoLavado)>
+        <!ELEMENT tipoLavado (#PCDATA)>
+        <!ATTLIST tipoLavado tipo2 (Yellow honey | Red Honey | Black Honey |Al sol | Mecanico)>
+        <!ATTLIST cafe variedad (Arábiga | Robusta | Excelsa | Libérica)>
+        <!ATTLIST cafe recoleccion (A mano | Mecanizada)>
+
+        <!ATTLIST extraccion (Lavado | SemiLavado | Secado)>
