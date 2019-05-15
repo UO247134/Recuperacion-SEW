@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE cafes SYSTEM "cafes.dtd">
+<cafes>
+
+    <cafe variedad="Bourbon" recoleccion="Manual" extraccion="lavado">
+        <nombre>Quetzalito</nombre>
+        <procedencia>Guatemala</procedencia>
+        <preparaciones>
+            <preparacion>Cortado</preparacion>
+            <preparacion>Solo largo</preparacion>
+            <preparacion>Carajillo</preparacion>
+        </preparaciones>
+    </cafe>
+    <cafe variedad="Caturra" recoleccion="Manual" extraccion="semiLavado-BlackHoney">
+        <nombre>LAS LAJAS BLACK HONEY</nombre>
+        <procedencia>Costa Rica</procedencia>
+        <preparaciones>
+            <preparacion>Brule</preparacion>
+            <preparacion>Arabe</preparacion>
+            <preparacion>Cortado</preparacion>
+        </preparaciones>
+    </cafe>
+    <cafe variedad="Arábiga" recoleccion="Manual" extraccion="lavado">
+        <nombre>Kamuyu</nombre>
+        <procedencia>Kenia</procedencia>
+        <preparaciones>
+            <preparacion>Mocha</preparacion>
+            <preparacion>Espresso</preparacion>
+            <preparacion>Frappe</preparacion>
+        </preparaciones>
+    </cafe>
+    <cafe variedad="Caturra" recoleccion="Manual" extraccion="lavado">
+        <nombre>Pitalito</nombre>
+        <procedencia>Colombia</procedencia>
+        <preparaciones>
+            <preparacion>Mocha</preparacion>
+            <preparacion>Espresso</preparacion>
+        </preparaciones>
+    </cafe>
+
+    <cafe variedad="Arábiga" recoleccion="Manual" extraccion="lavado">
+        <nombre>Gedeb Beriti</nombre>
+        <procedencia>Etiopia</procedencia>
+        <preparaciones>
+            <preparacion>Machiatto</preparacion>
+            <preparacion>Espresso</preparacion>
+        </preparaciones>
+    </cafe>
+    <cafe variedad="Libérica" recoleccion="Mecanizada" extraccion="semiLavado-YellowHoney">
+        <nombre>Kopi Campuran</nombre>
+        <procedencia>Malasia</procedencia>
+        <preparaciones>
+            <preparacion>Vienes</preparacion>
+            <preparacion>Irlandes</preparacion>
+        </preparaciones>
+    </cafe>
+    <cafe variedad="Excelsa" recoleccion="Manual" extraccion="lavado">
+        <nombre>Medellin Excelso</nombre>
+        <procedencia>Colombia</procedencia>
+        <preparaciones>
+            <preparacion>Latte</preparacion>
+            <preparacion>Cortado</preparacion>
+        </preparaciones>
+    </cafe>
+    <cafe variedad="Robusta" recoleccion="Mecanizada" extraccion="semiLavado-RedHoney">
+        <nombre>Lucifer´s Roast</nombre>
+        <procedencia>Brasil</procedencia>
+        <preparaciones>
+            <preparacion>Cappucino</preparacion>
+            <preparacion>Espresso</preparacion>
+            <preparacion>Gaelico</preparacion>
+        </preparaciones>
+    </cafe>
+
+    <cafe variedad="Robusta" recoleccion="Manual" extraccion="lavado">
+        <nombre>Happy Belly</nombre>
+        <procedencia>Etiopia</procedencia>
+        <preparaciones>
+            <preparacion>Turco</preparacion>
+            <preparacion>Barraquito</preparacion>
+        </preparaciones>
+    </cafe>
+    <cafe variedad="Libérica" recoleccion="Mecanizada" extraccion="secado-AlSol">
+        <nombre>La Grande Reserve Malongo</nombre>
+        <procedencia>Francia</procedencia>
+        <preparaciones>
+            <preparacion>Americano</preparacion>
+            <preparacion>Cappuccino</preparacion>
+        </preparaciones>
+    </cafe>
+    <cafe variedad="Arábiga" recoleccion="Mecanizada" extraccion="secado-Mecanico">
+        <nombre>Solimo</nombre>
+        <procedencia>Belgica</procedencia>
+        <preparaciones>
+            <preparacion>Espresso</preparacion>
+            <preparacion>Cortado</preparacion>
+        </preparaciones>
+    </cafe>
+    <cafe variedad="Excelsa" recoleccion="Mecanizada" extraccion="secado-Mecanico">
+        <nombre>La Brasileña Expresso Excelso</nombre>
+        <procedencia>Brasil</procedencia>
+        <preparaciones>
+            <preparacion>Con leche</preparacion>
+            <preparacion>Americano</preparacion>
+            <preparacion>Bombon</preparacion>
+        </preparaciones>
+    </cafe>
+
+
+
+</cafes>

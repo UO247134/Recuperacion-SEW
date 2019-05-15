@@ -1,18 +1,22 @@
 <!ELEMENT cafes (cafe+)>
-        <!ELEMENT cafe (nombre, especie, procedencia, preparaciones, extraccion)>
+        <!ELEMENT cafe (nombre, procedencia, preparaciones)>
         <!ELEMENT nombre (#PCDATA)>
-        <!ELEMENT especie (#PCDATA)>
         <!ELEMENT procedencia (#PCDATA)>
         <!ELEMENT preparaciones (preparacion+)>
         <!ELEMENT preparacion (#PCDATA)>
         <!ATTLIST preparacion (Espresso | Cortado | Capuccino | Con leche | Latte macchiato
                 |Bombon| Americano| Moka| Vienes| Irlandes| Frappe| Arabigo)>
+        <!ATTLIST cafe variedad (Arábiga | Robusta | Excelsa | Libérica | Bourbon | Catuai |Caturra)>
 
-        <!ELEMENT extraccion (tipoExtraccion)>
-        <!ELEMENT tipoExtraccion (tipoLavado)>
-        <!ELEMENT tipoLavado (#PCDATA)>
-        <!ATTLIST tipoLavado tipo2 (Yellow honey | Red Honey | Black Honey |Al sol | Mecanico)>
-        <!ATTLIST cafe variedad (Arábiga | Robusta | Excelsa | Libérica)>
-        <!ATTLIST cafe recoleccion (A mano | Mecanizada)>
+        <!ATTLIST cafe recoleccion (Manual | Mecanizada)>
 
-        <!ATTLIST extraccion (Lavado | SemiLavado | Secado)>
+        <!ATTLIST cafe extraccion (lavado|semiLavado-YellowHoney|
+                semiLavado-BlackHoney |semiLavado-RedHoney|
+                secado-AlSol|secado-Mecanico)>
+
+        <!--<!ELEMENT tipoExtraccion (tipo, especialidad)>
+        <!ATTLIST  cafe tipoExtraccion (Lavado | semilavado | secado)>
+        <!ATTLIST tipoExtraccion (Lavado | semilavado | secado)>
+        <!ATTLIST tipoLavado semilavado (Yellow honey | Red Honey | Black Honey)>
+        <!ATTLIST tipoLavado secado (Al sol | Mecanico)>
+-->
