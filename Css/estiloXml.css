@@ -1,0 +1,30 @@
+section {
+    margin: 1rem auto;
+    width:100%;
+    max-width:960px;
+    column-count: 3;
+    -webkit-column-span:all;
+    column-span:all;
+    break-inside: avoid;
+    page-break-inside: avoid;
+
+}
+img {
+    width: 300px;
+    height: 350px; }
+/* Móviles en horizontal o tablets en vertical */
+
+@media (max-width: 767px) {
+    section {
+        columns:2;
+    }
+
+}
+
+/* Móviles en vertical */
+
+@media (max-width: 600px) {
+    section {
+        columns: 1;
+    }
+}

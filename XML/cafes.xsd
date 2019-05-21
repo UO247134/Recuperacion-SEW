@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/cafes" elementFormDefault="qualified" targetNamespace="http://tempuri.org/cafes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="cafes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="cafe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cafe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="procedencia" />
+        <xs:element ref="preparaciones" />
+      </xs:sequence>
+      <xs:attribute name="variedad" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Arábiga" />
+            <xs:enumeration value="Robusta" />
+            <xs:enumeration value="Excelsa" />
+            <xs:enumeration value="Libérica" />
+            <xs:enumeration value="Bourbon" />
+            <xs:enumeration value="Catuai" />
+            <xs:enumeration value="Caturra" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="recoleccion" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Manual" />
+            <xs:enumeration value="Mecanizada" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="extraccion" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="lavado" />
+            <xs:enumeration value="semiLavado-YellowHoney" />
+            <xs:enumeration value="semiLavado-BlackHoney" />
+            <xs:enumeration value="semiLavado-RedHoney" />
+            <xs:enumeration value="secado-AlSol" />
+            <xs:enumeration value="secado-Mecanico" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nombre" type="xs:string" />
+  <xs:element name="procedencia" type="xs:string" />
+  <xs:element name="preparaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="preparacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="preparacion" type="xs:string" />
+</xs:schema>

@@ -4,19 +4,7 @@
         <!ELEMENT procedencia (#PCDATA)>
         <!ELEMENT preparaciones (preparacion+)>
         <!ELEMENT preparacion (#PCDATA)>
-        <!ATTLIST preparacion (Espresso | Cortado | Capuccino | Con leche | Latte macchiato
-                |Bombon| Americano| Moka| Vienes| Irlandes| Frappe| Arabigo)>
-        <!ATTLIST cafe variedad (Arábiga | Robusta | Excelsa | Libérica | Bourbon | Catuai |Caturra)>
-
-        <!ATTLIST cafe recoleccion (Manual | Mecanizada)>
-
-        <!ATTLIST cafe extraccion (lavado|semiLavado-YellowHoney|
-                semiLavado-BlackHoney |semiLavado-RedHoney|
-                secado-AlSol|secado-Mecanico)>
-
-        <!--<!ELEMENT tipoExtraccion (tipo, especialidad)>
-        <!ATTLIST  cafe tipoExtraccion (Lavado | semilavado | secado)>
-        <!ATTLIST tipoExtraccion (Lavado | semilavado | secado)>
-        <!ATTLIST tipoLavado semilavado (Yellow honey | Red Honey | Black Honey)>
-        <!ATTLIST tipoLavado secado (Al sol | Mecanico)>
--->
+        <!ATTLIST cafe imagen (#PCDATA)>
+        <!ATTLIST cafe variedad (Arábiga|Robusta|Excelsa|Libérica|Bourbon|Catuai|Caturra) #REQUIRED>
+        <!ATTLIST cafe recoleccion(Manual|Mecanizada) #REQUIRED>
+        <!ATTLIST cafe extraccion(Lavado|SemiLavado-YellowHoney|SemiLavado-BlackHoney|SemiLavado-RedHoney|Secado-AlSol|Secado-Mecanico) #REQUIRED>
