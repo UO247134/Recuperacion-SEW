@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Tabs - Content via Ajax</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../Css/estilo.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $( function() {
+            $( "#tabs" ).tabs({
+                beforeLoad: function( event, ui ) {
+                    ui.jqXHR.fail(function() {
+                        ui.panel.html(
+                            "Couldn't load this tab. We'll try to fix this as soon as possible. " +
+                            "If this wouldn't be a demo." );
+                    });
+                }
+            });
+        } );
+    </script>
+
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul id="tabs">
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="Historia.html">Historia</a></li>
+            <li><a href="../Htmls/Variedades.html">Variedades</a></li>
+            <li><a href="../Htmls/Productoras.html">Productora</a></li>
+            <li><a href="Marcas.html">Marcas</a></li>
+            <li><a href="../Htmls/Productos.html">Productos</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<main>
+    <div id = "tabs-1">
+    <section>
+        <h2>Bienvenidos a este espacio libre de sueño</h2>
+        <p> Todos llegados a cierto momento de nuestra vida acabamos cediendo a los
+            beneficios de esta infusión, esta es la página para aquellos que lo han hecho</p>
+        <p></p>
+        <p></p>
+    </section>
+    <section>
+        <h2>Multimedia</h2>
+        <video width="320" height="240" controls>
+            <source src="Htmls/util/CÓMO%20HACER%20EL%20MEJOR%20CAFÉ%20CON%20CAFETERA%20ITALIANA%20(%20Español%20)%202016.mp4"
+                    type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <audio src="Htmls/util/y2mate.com%20-%20spot_anuncio_saimaza_pueblo_30_completo_2016_hrELqU55ONE.mp3"
+               preload="auto" controls></audio>
+    </section>
+    </div>
+</main>
+</body>
+</html>

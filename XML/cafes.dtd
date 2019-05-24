@@ -2,6 +2,9 @@
         <!ELEMENT cafe (nombre, procedencia, preparaciones)>
         <!ELEMENT nombre (#PCDATA)>
         <!ELEMENT procedencia (#PCDATA)>
+        <!ELEMENT coordenadas (latitud,longitud)>
+        <!ELEMENT latitud (#PCDATA)>
+        <!ELEMENT longitud (#PCDATA)>
         <!ELEMENT preparaciones (preparacion+)>
         <!ELEMENT preparacion (#PCDATA)>
         <!ATTLIST cafe imagen (#PCDATA)>

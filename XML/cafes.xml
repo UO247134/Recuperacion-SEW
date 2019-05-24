@@ -4,6 +4,10 @@
     <cafe variedad="Bourbon" recoleccion="Manual" extraccion="Lavado" imagen="util/Quetzalito.jpg">
         <nombre>Quetzalito</nombre>
         <procedencia>Guatemala</procedencia>
+        <coordenadas>
+            <latitud>14.569016</latitud>
+            <longitud>-90.551357</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Cortado</preparacion>
             <preparacion>Solo largo</preparacion>
@@ -13,6 +17,10 @@
     <cafe variedad="Caturra" recoleccion="Manual" extraccion="SemiLavado-BlackHoney" imagen="util/LasLajasBlackHoney.jpg">
         <nombre>LAS LAJAS BLACK HONEY</nombre>
         <procedencia>Costa Rica</procedencia>
+        <coordenadas>
+            <latitud>10.246548</latitud>
+            <longitud>-84.408665</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Brule</preparacion>
             <preparacion>Arabe</preparacion>
@@ -22,6 +30,10 @@
     <cafe variedad="Arábiga" recoleccion="Manual" extraccion="Lavado" imagen="util/Kamuyu.jpg">
         <nombre>Kamuyu</nombre>
         <procedencia>Kenia</procedencia>
+        <coordenadas>
+            <latitud>-0.434247</latitud>
+            <longitud>36.958268</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Mocha</preparacion>
             <preparacion>Espresso</preparacion>
@@ -31,15 +43,22 @@
     <cafe variedad="Caturra" recoleccion="Manual" extraccion="Lavado" imagen="util/Pitalito.jpeg">
         <nombre>Pitalito</nombre>
         <procedencia>Colombia</procedencia>
+        <coordenadas>
+            <latitud>1.855223</latitud>
+            <longitud>-76.042477</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Mocha</preparacion>
             <preparacion>Espresso</preparacion>
         </preparaciones>
     </cafe>
-
     <cafe variedad="Arábiga" recoleccion="Manual" extraccion="Lavado" imagen="util/GedebBeriti.jpg">
         <nombre>Gedeb Beriti</nombre>
         <procedencia>Etiopia</procedencia>
+        <coordenadas>
+            <latitud>5.918395</latitud>
+            <longitud>38.249947</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Machiatto</preparacion>
             <preparacion>Espresso</preparacion>
@@ -48,6 +67,10 @@
     <cafe variedad="Libérica" recoleccion="Mecanizada" extraccion="SemiLavado-YellowHoney" imagen="util/KopiCampuran.jpg">
         <nombre>Kopi Campuran</nombre>
         <procedencia>Malasia</procedencia>
+        <coordenadas>
+            <latitud>2.222532</latitud>
+            <longitud>102.158815</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Vienes</preparacion>
             <preparacion>Irlandes</preparacion>
@@ -56,6 +79,10 @@
     <cafe variedad="Excelsa" recoleccion="Manual" extraccion="Lavado" imagen="util/MedellinExcelso.jpg">
         <nombre>Medellin Excelso</nombre>
         <procedencia>Colombia</procedencia>
+        <coordenadas>
+            <latitud>6.283135</latitud>
+            <longitud>-75.516368</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Latte</preparacion>
             <preparacion>Cortado</preparacion>
@@ -64,16 +91,23 @@
     <cafe variedad="Robusta" recoleccion="Mecanizada" extraccion="SemiLavado-RedHoney" imagen="util/LucifersRoast.jpg">
         <nombre>Lucifer´s Roast</nombre>
         <procedencia>Brasil</procedencia>
+        <coordenadas>
+            <latitud>-22.000477</latitud>
+            <longitud>-44.750687</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Cappucino</preparacion>
             <preparacion>Espresso</preparacion>
             <preparacion>Gaelico</preparacion>
         </preparaciones>
     </cafe>
-
     <cafe variedad="Robusta" recoleccion="Manual" extraccion="Lavado" imagen="util/HappyBelly.jpg">
         <nombre>Happy Belly</nombre>
         <procedencia>Etiopia</procedencia>
+        <coordenadas>
+            <latitud>7.267249</latitud>
+            <longitud>36.232617</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Turco</preparacion>
             <preparacion>Barraquito</preparacion>
@@ -82,6 +116,10 @@
     <cafe variedad="Libérica" recoleccion="Mecanizada" extraccion="Secado-AlSol" imagen="util/LaGrandeReserveMalongo.jpg">
         <nombre>La Grande Reserve Malongo</nombre>
         <procedencia>Francia</procedencia>
+        <coordenadas>
+            <latitud>43.696903</latitud>
+            <longitud>7.300193</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Americano</preparacion>
             <preparacion>Cappuccino</preparacion>
@@ -90,6 +128,10 @@
     <cafe variedad="Arábiga" recoleccion="Mecanizada" extraccion="Secado-Mecanico" imagen="util/Solimo.jpg">
         <nombre>Solimo</nombre>
         <procedencia>Belgica</procedencia>
+        <coordenadas>
+            <latitud>50.551142</latitud>
+            <longitud>6.068363</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Espresso</preparacion>
             <preparacion>Cortado</preparacion>
@@ -98,6 +140,10 @@
     <cafe variedad="Excelsa" recoleccion="Mecanizada" extraccion="Secado-Mecanico" imagen="util/LaBrasileña.jpg">
         <nombre>La Brasileña Expresso Excelso</nombre>
         <procedencia>Brasil</procedencia>
+        <coordenadas>
+            <latitud>-2.104682</latitud>
+            <longitud>-62.333850</longitud>
+        </coordenadas>
         <preparaciones>
             <preparacion>Con leche</preparacion>
             <preparacion>Americano</preparacion>
