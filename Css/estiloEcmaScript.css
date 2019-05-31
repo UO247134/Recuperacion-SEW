@@ -1,9 +1,22 @@
 div {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: Transparent;
     color:#000;
 }
 
 main{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.0);
     color:#000;
+}
+input[type=button]{
+    background-color:Sienna;
+    color:PaleGoldenRod;
+    font-size: 18px;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+input[type=button]:focus{
+    background-color: PaleGoldenRod;
+    border-color: Sienna;
+    color: black;
 }

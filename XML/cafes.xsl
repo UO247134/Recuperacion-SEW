@@ -32,6 +32,10 @@
                                         <p>
                                             <xsl:value-of select="@extraccion"/>
                                         </p>
+                                        <p>
+                                            <xsl:value-of select="@extraccion"/>
+                                        </p>
+                                        <p><a rel="modal:open"> Detalles</a></p>
                                     </figcaption>
                                 </figure>
                             </a>
