@@ -1,3 +1,52 @@
+html{
+    background-image: url(../Htmls/util/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+@media screen and (max-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (max-width:1024px) and (min-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (min-width:1024px) {
+    /* reglas CSS */
+}
+head {
+    background-color: DarkGoldenRod;
+}
+h1 {
+    background-color:Sienna;
+    color: PaleGoldenRod;
+    text-transform: uppercase;
+    padding: 50px 40px;
+    text-align: center;
+
+    border-radius: 92px 92px 92px 92px;
+    -moz-border-radius: 92px 92px 92px 92px;
+    -webkit-border-radius: 92px 92px 92px 92px;
+    border: 0px double #000000;
+}
+h2,h3,h4,h5 {
+    background-color:Sienna;
+    color: white;
+    text-align: center;
+    width: fit-content;
+
+    border-radius: 92px 92px 92px 92px;
+    -moz-border-radius: 92px 92px 92px 92px;
+    -webkit-border-radius: 92px 92px 92px 92px;
+    border: 0px double #000000;
+
+}
+body {
+    font: 400 15px Tahoma, sans-serif;
+    line-height: 1.8;
+    color: GhostWhite;
+
+
+}
 section {
     margin: 1rem auto;
     width:100%;
@@ -8,6 +57,13 @@ section {
     break-inside: avoid;
     page-break-inside: avoid;
 
+}
+p{
+    background-color: bisque;
+    background-size: contain;
+    color: black;
+    text-align: justify;
+    display: compact;
 }
 img {
     width: 300px;

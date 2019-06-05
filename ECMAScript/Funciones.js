@@ -25,4 +25,3 @@ class Tabs {
 let tabs = new Tabs();
 tabs.hideAll();
 tabs.init();
-t

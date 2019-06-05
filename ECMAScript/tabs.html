@@ -15,7 +15,7 @@
 </head>
 <body>
 <h1>El cafeinomano desvelado</h1>
-<main id="tabs">
+<main>
     <header>
         <nav>
             <ul>
@@ -38,14 +38,11 @@
         </section>
         <section>
             <h2>Multimedia</h2>
-            <video width="320" height="240" controls>
-                <source src="Htmls/util/CÓMO%20HACER%20EL%20MEJOR%20CAFÉ%20CON%20CAFETERA%20ITALIANA%20(%20Español%20)%202016.mp4"
-                        type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
 
-            <audio src="Htmls/util/y2mate.com%20-%20spot_anuncio_saimaza_pueblo_30_completo_2016_hrELqU55ONE.mp3"
-                   preload="auto" controls></audio>
+            <video id = "video" poster = "../Htmls/util/Poster.jpg"width="320" height="240" controls="true">
+                <source src="../Htmls/util/CÓMO%20HACER%20EL%20MEJOR%20CAFÉ%20CON%20CAFETERA%20ITALIANA%20(%20Español%20)%202016.mp4"
+                        type="video/mp4">
+            </video>
         </section>
     </div>
     <div id="tabs-2">
@@ -351,5 +348,6 @@
 </main>
 
 <script src = "Funciones.js"></script>
+<script src = "Textrack/VideoTextrack.js"></script>
 </body>
 </html>

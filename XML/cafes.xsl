@@ -9,40 +9,64 @@
                       content="Xsl asociado de al xml cafes"/>
                 <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"/>
                 <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"/>
-                <link rel="stylesheet" type="text/css" href="../Css/estilo.css"/>
                 <link rel="stylesheet" type="text/css" href="../Css/estiloXml.css"/>
             </head>
             <body>
                 <h1>Productos de Cafe Destacados</h1>
                 <section id="cafes">
-                <main>
-                    <xsl:for-each select="cafes/cafe">
-                        <article>
-                            <a  target="_blank">
-                                <figure>
-                                    <img src="{@imagen}"/>
+                    <main>
+                        <xsl:for-each select="cafes/cafe">
+                            <article>
+                                <a target="_blank">
+                                    <figure>
+                                        <img src="{@imagen}"/>
 
-                                    <figcaption>
-                                        <p>
-                                            <xsl:value-of select="nombre"/>
-                                        </p>
-                                        <p>
-                                            <xsl:value-of select="procedencia"/>
-                                        </p>
-                                        <p>
-                                            <xsl:value-of select="@extraccion"/>
-                                        </p>
-                                        <p>
-                                            <xsl:value-of select="@extraccion"/>
-                                        </p>
-                                        <p><a rel="modal:open"> Detalles</a></p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </article>
+                                        <figcaption>
+                                            <li>
+                                                <p>
+                                                    <xsl:value-of select="nombre"/>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <xsl:value-of select="procedencia"/>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <xsl:value-of select="@extraccion"/>
+                                                </p>
+                                            </li>
+                                            <button onclick="document.getElementById('modal').style.display='block'"
+                                                    class="w3-modal-content w3-animate-zoom">Detalles
+                                            </button>
+                                            <div id="modal" class="w3-modal">
+                                                <div class="w3-modal-content">
+                                                    <div class="w3-container">
+                                                        <img src="{@imagen}"/>
+                                                        <p>
+                                                            <xsl:value-of select="@variedad"/>
+                                                        </p>
+                                                        <p>
+                                                            <xsl:value-of select="procedencia"/>
+                                                        </p>
+                                                        <p>
+                                                            <xsl:value-of select="@extraccion"/>
+                                                        </p>
+                                                        <p>
+                                                            <xsl:value-of select="@recoleccion"/>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                    </xsl:for-each>
-                </main>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </article>
+
+                        </xsl:for-each>
+                    </main>
                 </section>
             </body>
         </html>
