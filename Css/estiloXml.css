@@ -70,6 +70,8 @@ img {
     height: 350px; }
 /* Móviles en horizontal o tablets en vertical */
 
+
+
 @media (max-width: 767px) {
     section {
         columns:2;

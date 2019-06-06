@@ -19,8 +19,8 @@ class Mapa {
 
     obtener(posicion) {
         var coordenadas = posicion.coords;
-        mapa.datos.set('Latitud', 14.569016);
-        mapa.datos.set('Longitud', -90.551357);
+        mapa.datos.set('Latitud', coordenadas.latitude);
+        mapa.datos.set('Longitud', posicion.longitude);
         mapa.mostrar();
 
     }
