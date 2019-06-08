@@ -67,18 +67,24 @@ p{
 }
 img {
     width: 300px;
-    height: 350px; }
+    height: 300px; }
 /* Móviles en horizontal o tablets en vertical */
+ div section{
+    width: 150px;
+    height: 100px;
+}
 
 
-
-@media (max-width: 767px) {
+@media (max-width: 900px) {
     section {
         columns:2;
     }
 
 }
-
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+}
 /* Móviles en vertical */
 
 @media (max-width: 600px) {

@@ -25,12 +25,12 @@ class Mapa {
 
     }
 
-    mostrar() {
+    mostrar(latitud, longitud,modal) {
         var localizacion = {
-            lat: this.datos.get("Latitud"),
-            lng: this.datos.get("Longitud")
+            lat: latitud,
+            lng: longitud
         };
-        var map = new google.maps.Map(document.getElementsByTagName('main')[0], {
+        var map = new google.maps.Map(document.getElementsById(modal), {
             zoom: 15,
             center: localizacion
         });

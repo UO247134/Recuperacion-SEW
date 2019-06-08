@@ -11,6 +11,7 @@
                 <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"/>
                 <link rel="stylesheet" type="text/css" href="../Css/estiloXml.css"/>
                 <link rel="stylesheet" type="text/css" href="../Css/EstiloModal.css"/>
+                <link rel="stylesheet" type="text/css" href="../Css/Mapa.css"/>
             </head>
             <body>
                 <h1>Productos de Cafe Destacados</h1>
@@ -24,40 +25,44 @@
                                         <img src="{@imagen}"/>
 
                                         <figcaption>
-                                            <li>
-                                                <p>
-                                                    <xsl:value-of select="nombre"/>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <xsl:value-of select="procedencia"/>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <xsl:value-of select="@extraccion"/>
-                                                </p>
-                                            </li>
-                                            <button href = "Modal.js" onclick = "modales.desplegarModal('{generate-id()}');">Detalles </button>
+                                            <p>
+                                                <xsl:value-of select="nombre"/>
+                                            </p>
+                                            <p>
+                                                <xsl:value-of select="procedencia"/>
+                                            </p>
+                                            <p>
+                                                <xsl:value-of select="@extraccion"/>
+                                            </p>
+                                            <button href="Modal.js" onclick="modales.desplegarModal(
+                                                '{coordenadas/latitud}','{coordenadas/longitud}','{generate-id()}','modal-map{generate-id()}');">
+                                                Detalles
+                                            </button>
                                             <div id='{generate-id()}' class="modal">
-
-                                                <!-- Modal content -->
+                                                <span class="close" onclick="modales.ocultarModal('{generate-id()}');">
+                                                    X
+                                                </span>
                                                 <div class="modal-content">
-                                                    <span class="close" onclick="modales.ocultarModal('{generate-id()}');">X</span>
-                                                    <img src="{@imagen}"/>
+
+                                                    <img align="left" src="{@imagen}"/>
                                                     <p>
+                                                        Variedad:
                                                         <xsl:value-of select="@variedad"/>
                                                     </p>
                                                     <p>
+                                                        Procedencia:
                                                         <xsl:value-of select="procedencia"/>
                                                     </p>
                                                     <p>
+                                                        Extraccion:
                                                         <xsl:value-of select="@extraccion"/>
                                                     </p>
                                                     <p>
+                                                        Recoleccion:
                                                         <xsl:value-of select="@recoleccion"/>
                                                     </p>
+                                                </div>
+                                                <div class="modal-content" id="modal-map{generate-id()}">
                                                 </div>
                                             </div>
                                         </figcaption>
@@ -69,7 +74,8 @@
 
                     </main>
                 </section>
-                <script src="../ECMAScript/Mapa.js"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCv4NCHuT2BpoTflmy_JwKuOjZAztWCe8"
+                        type="text/javascript"></script>
                 <script src="Modal.js"></script>
             </body>
         </html>

@@ -4,26 +4,34 @@ class Modal {
     constructor() {
     };
 
-    init(){}
-
 // When the user clicks the button, open the modal
-    desplegarModal(Propio) {
-        console.log(Propio);
-        var modal = document.getElementById(Propio);
+    desplegarModal(latitud, longitud, modalId,contenidoModalID) {
+        var modal = document.getElementById(modalId);
         modal.style.display = "block";
+        this.mostrarMapa(latitud, longitud, contenidoModalID);
     }
 
-// When the user clicks on <span> (x), close the modal
-    ocultarModal(Propio) {
-        var modal = document.getElementById(Propio);
+    ocultarModal(modalId) {
+        var modal = document.getElementById(modalId);
         //var span = document.getElementsByClassName("close")[0];
         modal.style.display = "none";
     }
 
-// When the user clicks anywhere outside of the modal, close it
-//window.onclick = function(event) {
-    //  if (event.target == modal) {
-    //    modal.style.display = "none";
-//}
+    mostrarMapa(latitud, longitud, modalId) {
+        var localizacion = {
+            lat: parseFloat(latitud),
+            lng: parseFloat(longitud)
+        };
+        var map = new google.maps.Map(document.getElementById(modalId), {
+            zoom: 5,
+            center: localizacion
+        });
+        var marker = new google.maps.Marker({
+            position: localizacion,
+            map: map
+        })
+    }
+
 }
+
 let modales = new Modal();
