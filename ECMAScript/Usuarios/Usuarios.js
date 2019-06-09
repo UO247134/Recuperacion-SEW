@@ -59,7 +59,7 @@ class Usuarios {
         var contraseña = document.getElementById("contraseña").value;
         var recontraseña = document.getElementById("recontraseña").value;
         var fechaNacimiento = document.getElementById("fechanacimiento").value;
-        if (!this.checkUserExists()) {
+        if (!this.checkUserExists(correo)) {
             if (contraseña == recontraseña) {
                 this.baseDatosUsuarios.Usuarios.push({
                     "nombre": nombre,
@@ -78,13 +78,13 @@ class Usuarios {
             console.log("Usuario ya existente");
     }
     registerUserFromTabs() {
-        var nombre = document.getElementById("nombre").value;
-        var apellido = document.getElementById("apellido").value;
-        var correo = document.getElementById("correo").value;
-        var contraseña = document.getElementById("contraseña").value;
-        var recontraseña = document.getElementById("recontraseña").value;
-        var fechaNacimiento = document.getElementById("fechanacimiento").value;
-        if (!this.checkUserExists()) {
+        var nombre = document.getElementById("nombreRegistro").value;
+        var apellido = document.getElementById("apellidoRegistro").value;
+        var correo = document.getElementById("correoRegistro").value;
+        var contraseña = document.getElementById("contraseñaRegistro").value;
+        var recontraseña = document.getElementById("recontraseñaRegistro").value;
+        var fechaNacimiento = document.getElementById("fechanacimientoRegistro").value;
+        if (!this.checkUserExists(correo)) {
             if (contraseña == recontraseña) {
                 this.baseDatosUsuarios.Usuarios.push({
                     "nombre": nombre,
@@ -103,13 +103,30 @@ class Usuarios {
             console.log("Usuario ya existente");
     }
     logUser() {
-        if (this.checkUserExists()) {
-            if (this.checkContraseñaValida()) {
+        var correo = document.getElementById("correo").value;
+        var contraseña = document.getElementById("contraseña").value;
+        if (this.checkUserExists(correo)) {
+            if (this.checkContraseñaValida(correo,contraseña)) {
                 console.log("Loggeo exitoso");
-                if (this.checkUserIsAdmin()) {
+                if (this.checkUserIsAdmin(correo)) {
                     window.location = "VentanaAdmin.html";
                 }else {
                     window.location = "../Tabs.html";
+                }
+            } else
+                console.log("Contraseña Invalida");
+        }
+    }
+    logUserFromTabs() {
+        var correo = document.getElementById("correoLoggeo").value;
+        var contraseña = document.getElementById("contraseñaLoggeo").value;
+        if (this.checkUserExists(correo)) {
+            if (this.checkContraseñaValida(correo,contraseña)) {
+                console.log("Loggeo exitoso");
+                if (this.checkUserIsAdmin(correo)) {
+                    window.location = "Usuarios/VentanaAdmin.html";
+                }else {
+                    window.location = "Tabs.html";
                 }
             } else
                 console.log("Contraseña Invalida");
@@ -127,8 +144,9 @@ class Usuarios {
             newrow.insertCell(5).appendChild( document.createTextNode(this.baseDatosUsuarios.Usuarios[i].clase));
         }
     }
-    checkUserExists() {
-        var correo = document.getElementById("correo").value;
+
+    checkUserExists(correoparametro) {
+        var correo = correoparametro;
         for (var i = 0; i < this.baseDatosUsuarios.Usuarios.length; i++) {
             if (this.baseDatosUsuarios.Usuarios[i].correo == correo) {
                 console.log("Usuario existe");
@@ -138,13 +156,11 @@ class Usuarios {
         console.log("Usuario no existe");
         return false;
     }
-
-    checkContraseñaValida() {
-        var correo = document.getElementById("correo").value;
-        var contraseña = document.getElementById("contraseña").value;
+    checkContraseñaValida(correoparametro,contraseñaparametro) {
+        var correo = correoparametro;
+        var contraseña = contraseñaparametro;
         for (var i = 0; i < this.baseDatosUsuarios.Usuarios.length; i++) {
             if (this.baseDatosUsuarios.Usuarios[i].correo == correo) {
-                console.log(this.baseDatosUsuarios.Usuarios[i].contraseña);
                 if (this.baseDatosUsuarios.Usuarios[i].contraseña == contraseña) {
                     return true;
                 } else {
@@ -154,9 +170,8 @@ class Usuarios {
         }
         return false;
     }
-
-    checkUserIsAdmin() {
-        var correo = document.getElementById("correo").value;
+    checkUserIsAdmin(correoparametro) {
+        var correo = correoparametro;
         for (var i = 0; i < this.baseDatosUsuarios.Usuarios.length; i++) {
             for (var i = 0; i < this.baseDatosUsuarios.Usuarios.length; i++) {
                 if (this.baseDatosUsuarios.Usuarios[i].correo == correo) {

@@ -24,6 +24,7 @@
                 <li><input type="button" value="Productora" onclick=tabs.loadPage("#tabs-4")></li>
                 <li><input type="button" value="Marcas" onclick=tabs.loadPage("#tabs-5")></li>
                 <li><input type="button" value="Registro" onclick=tabs.loadPage("#tabs-6")></li>
+                <li><input type="button" value="Loggeo" onclick=tabs.loadPage("#tabs-7")></li>
             </ul>
         </nav>
     </header>
@@ -342,13 +343,27 @@
         <section>
             <form>
                 <ul>
-                    <li><label>Nombre: <input id=nombre type="text" name="nombre"></label> </li>
-                    <li><label>Apellido: <input id=apellido type="text" name="apellido"></label></li>
-                    <li><label>Correo: <input id=correo type="text" name="correo"></label></li>
-                    <li><label>Fecha Nacimiento: <input id=fechanacimiento type="date" name="fecha"></label></li>
-                    <li><label>Contraseña: <input id=contraseña type="password" name="contraseña"></label></li>
-                    <li><label>Repita Contraseña: <input id=recontraseña type="password" name="ReContraseña"></label></li>
+                    <li><label>Nombre: <input id=nombreRegistro type="text" name="nombre"></label> </li>
+                    <li><label>Apellido: <input id=apellidoRegistro type="text" name="apellido"></label></li>
+                    <li><label>Correo: <input id=correoRegistro type="text" name="correo"></label></li>
+                    <li><label>Fecha Nacimiento: <input id=fechanacimientoRegistro type="date" name="fecha"></label></li>
+                    <li><label>Contraseña: <input id=contraseñaRegistro type="password" name="contraseña"></label></li>
+                    <li><label>Repita Contraseña: <input id=recontraseñaRegistro type="password" name="ReContraseña"></label></li>
                     <li><input type="button" value="Registro" onclick=usuarios.registerUserFromTabs()></li>
+                </ul>
+            </form>
+        </section>
+    </div>
+    <div id="tabs-7">
+        <<h2>Inicie Sesion como usuario</h2>
+        <section>
+            <form>
+                <ul>
+                    <form>
+                        <label>Correo: <input id=correoLoggeo type="text" name="correo"><br></label>
+                        <label>Contraseña: <input id=contraseñaLoggeo type="password" name="contraseña"></label>
+                        <input type="button" value="Login" onclick=usuarios.logUserFromTabs()>
+                    </form>
                 </ul>
             </form>
         </section>

@@ -16,6 +16,7 @@ class Tabs {
         $("#tabs-4").hide();
         $("#tabs-5").hide();
         $("#tabs-6").hide();
+        $("#tabs-7").hide();
     }
     init(){
         $("#tabs-1").show();
