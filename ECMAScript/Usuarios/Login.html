@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Miguel Guimarey">
+    <meta name="date" content="2019-06-04T11:45:37+00:00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Registro"/>
+    <link rel="stylesheet" type="text/css" href="../../Css/estilo.css"/>
+    <title>Login</title>
+</head>
+<body>
+<main>
+    <section>
+        <h2>Ingrese su Usuario </h2>
+        <div>
+            <form>
+                <label> Correo: <input id=correo type="text" name="correo"><br></label>
+                <label>Contraseña: <input id=contraseña type="password" name="contraseña"></label>
+                <input type="button" value="Login" onclick=usuarios.logUser()>
+            </form>
+        </div>
+    </section>
+</main>
+<script src="Usuarios.js"></script>
+</body>
+</html>
