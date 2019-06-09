@@ -11,7 +11,6 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
-
 </head>
 <body>
 <h1>El cafeinomano desvelado</h1>
@@ -24,7 +23,7 @@
                 <li><input type="button" value="Variedades" onclick=tabs.loadPage("#tabs-3")></li>
                 <li><input type="button" value="Productora" onclick=tabs.loadPage("#tabs-4")></li>
                 <li><input type="button" value="Marcas" onclick=tabs.loadPage("#tabs-5")></li>
-                <li><input type="button" value="Productos" onclick=tabs.loadPage("#tabs-6")></li>
+                <li><input type="button" value="Registro" onclick=tabs.loadPage("#tabs-6")></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +38,7 @@
         <section>
             <h2>Multimedia</h2>
 
-            <video id = "video" poster = "../Htmls/util/Poster.jpg"width="320" height="240" controls="true">
+            <video id="video" poster="../Htmls/util/Poster.jpg" width="320" height="240" controls="true">
                 <source src="../Htmls/util/CÓMO%20HACER%20EL%20MEJOR%20CAFÉ%20CON%20CAFETERA%20ITALIANA%20(%20Español%20)%202016.mp4"
                         type="video/mp4">
             </video>
@@ -339,15 +338,25 @@
         </section>
     </div>
     <div id="tabs-6">
-        <h2>Productos</h2>
-        <p> Todos llegados a cierto momento de nuestra vida acabamos cediendo a los
-            beneficios de esta infusión, esta es la página para aquellos que lo han hecho</p>
-        <p></p>
-        <p></p>
+        <<h2>Registrese como usuario</h2>
+        <section>
+            <form>
+                <ul>
+                    <li><label>Nombre: <input id=nombre type="text" name="nombre"></label> </li>
+                    <li><label>Apellido: <input id=apellido type="text" name="apellido"></label></li>
+                    <li><label>Correo: <input id=correo type="text" name="correo"></label></li>
+                    <li><label>Fecha Nacimiento: <input id=fechanacimiento type="date" name="fecha"></label></li>
+                    <li><label>Contraseña: <input id=contraseña type="password" name="contraseña"></label></li>
+                    <li><label>Repita Contraseña: <input id=recontraseña type="password" name="ReContraseña"></label></li>
+                    <li><input type="button" value="Registro" onclick=usuarios.registerUserFromTabs()></li>
+                </ul>
+            </form>
+        </section>
     </div>
 </main>
 
-<script src = "Funciones.js"></script>
-<script src = "Textrack/VideoTextrack.js"></script>
+<script src="Funciones.js"></script>
+<script src="Textrack/VideoTextrack.js"></script>
+<script src="Usuarios/Usuarios.js"></script>
 </body>
 </html>

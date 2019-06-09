@@ -7,21 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de Registro"/>
     <link rel="stylesheet" type="text/css" href="../../Css/estilo.css"/>
-    <title>Login</title>
+    <script src="Usuarios.js"></script>
+    <title>Admin</title>
 </head>
 <body>
 <main>
     <section>
-        <h2>Ingrese su Usuario </h2>
-        <div>
-            <form>
-                <label>Correo: <input id=correo type="text" name="correo"><br></label>
-                <label>Contraseña: <input id=contraseña type="password" name="contraseña"></label>
-                <input type="button" value="Login" onclick=usuarios.logUser()>
-            </form>
-        </div>
+        <h2>Usuarios Existentes</h2>
+        <table id=table class="egt">
+            <tr>
+
+                <th>Nombre</th>
+
+                <th>Apellidos</th>
+
+                <th>Correo</th>
+
+                <th>Nacimiento</th>
+
+                <th>Saldo</th>
+
+                <th>Clase Usuario</th>
+            </tr>
+        </table>
     </section>
 </main>
-<script src="Usuarios.js"></script>
+<script>
+    usuarios.fillUserTable()
+</script>
 </body>
 </html>
