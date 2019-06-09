@@ -1,55 +1,7 @@
 class Usuarios {
-    baseDatosUsuarios = {
-        "Usuarios": [
-            {
-                "nombre": "Miguel",
-                "apellidos": "Guimarey",
-                "correo": "miguel@correo.com",
-                "nacimiento": "1996-03-01",
-                "dinero": 5000.00,
-                "contraseña": "cafe",
-                "clase": "admin"
-            },
-            {
-                "nombre": "Paco",
-                "apellidos": "Gonzalez Quesada",
-                "correo": "paco@correo.com",
-                "nacimiento": "1996-01-03",
-                "dinero": 50.00,
-                "contraseña": "cafe",
-                "clase": "user"
-            },
-            {
-                "nombre": "Jara",
-                "apellidos": "Fernandez",
-                "correo": "jara@correo.com",
-                "nacimiento": "1991-06-02",
-                "dinero": 20.00,
-                "contraseña": "cafe",
-                "clase": "user"
-            },
-            {
-                "nombre": "Robustiano",
-                "apellidos": "Bonka",
-                "correo": "robustiano@correo.com",
-                "nacimiento": "1928-02-13",
-                "dinero": 500.00,
-                "contraseña": "cafe",
-                "clase": "user"
-            },
-            {
-                "nombre": "Javier",
-                "apellidos": "Fernandez",
-                "correo": "javier@correo.com",
-                "nacimiento": "1999-11-02",
-                "dinero": 50.00,
-                "contraseña": "cafe",
-                "clase": "user"
-            }
-        ]
-    }
 
-    constructor() {
+    constructor(base) {
+        this.baseDatosUsuarios = base;
     };
 
     registerUser() {
@@ -189,4 +141,52 @@ class Usuarios {
     }
 
 }
-let usuarios = new Usuarios();
+base = {"Usuarios": [
+    {
+        "nombre": "Miguel",
+        "apellidos": "Guimarey",
+        "correo": "miguel@correo.com",
+        "nacimiento": "1996-03-01",
+        "dinero": 5000.00,
+        "contraseña": "cafe",
+        "clase": "admin"
+    },
+    {
+        "nombre": "Paco",
+        "apellidos": "Gonzalez Quesada",
+        "correo": "paco@correo.com",
+        "nacimiento": "1996-01-03",
+        "dinero": 50.00,
+        "contraseña": "cafe",
+        "clase": "user"
+    },
+    {
+        "nombre": "Jara",
+        "apellidos": "Fernandez",
+        "correo": "jara@correo.com",
+        "nacimiento": "1991-06-02",
+        "dinero": 20.00,
+        "contraseña": "cafe",
+        "clase": "user"
+    },
+    {
+        "nombre": "Robustiano",
+        "apellidos": "Bonka",
+        "correo": "robustiano@correo.com",
+        "nacimiento": "1928-02-13",
+        "dinero": 500.00,
+        "contraseña": "cafe",
+        "clase": "user"
+    },
+    {
+        "nombre": "Javier",
+        "apellidos": "Fernandez",
+        "correo": "javier@correo.com",
+        "nacimiento": "1999-11-02",
+        "dinero": 50.00,
+        "contraseña": "cafe",
+        "clase": "user"
+    }
+]
+}
+let usuarios = new Usuarios(base);
