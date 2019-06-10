@@ -67,6 +67,7 @@ class Tabs {
                     "clase": "user"
                 });
                 this.loadPage("#tabs-7");
+                this.limpiarCampos();
                 console.log("Registro exitoso");
             } else
                 console.log("Contraseñas no coinciden");
@@ -84,6 +85,7 @@ class Tabs {
                 }else {
                     this.login();
                 }
+                this.limpiarCampos();
             } else
                 console.log("Contraseña Invalida");
         }
@@ -142,6 +144,16 @@ class Tabs {
             newrow.insertCell(4).appendChild( document.createTextNode(this.baseDatosUsuarios.Usuarios[i].dinero));
             newrow.insertCell(5).appendChild( document.createTextNode(this.baseDatosUsuarios.Usuarios[i].clase));
         }
+    }
+    limpiarCampos(){
+        $("#nombreRegistro").val("");
+        $("#apellidoRegistro").val("");
+        $("#correoRegistro").val("");
+        $("#fechanacimientoRegistro").val("");
+        $("#contraseñaRegistro").val("");
+        $("#recontraseñaRegistro").val("");
+        $("#correoLoggeo").val("");
+        $("#contraseñaLoggeo").val("");
     }
 
 }
