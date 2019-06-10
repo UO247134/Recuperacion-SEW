@@ -18,17 +18,18 @@
     <header>
         <nav>
             <ul>
-                <li><input type="button" value="Principal" onclick=tabs.loadPage("#tabs-1")></li>
-                <li><input type="button" value="Historia" onclick=tabs.loadPage("#tabs-2")></li>
-                <li><input type="button" value="Variedades" onclick=tabs.loadPage("#tabs-3")></li>
-                <li><input type="button" value="Productora" onclick=tabs.loadPage("#tabs-4")></li>
-                <li><input type="button" value="Marcas" onclick=tabs.loadPage("#tabs-5")></li>
-                <li><input type="button" value="Registro" onclick=tabs.loadPage("#tabs-6")></li>
-                <li><input type="button" value="Loggeo" onclick=tabs.loadPage("#tabs-7")></li>
+                <li id = BotonPrincipal><input type="button" value="Principal" onclick=tabs.loadPage("#tabs-1")></li>
+                <li id = BotonHistoria><input type="button" value="Historia" onclick=tabs.loadPage("#tabs-2")></li>
+                <li id = BotonVariedades><input type="button" value="Variedades" onclick=tabs.loadPage("#tabs-3")></li>
+                <li id = BotonProductora><input type="button" value="Productora" onclick=tabs.loadPage("#tabs-4")></li>
+                <li id = BotonMarcas><input type="button" value="Marcas" onclick=tabs.loadPage("#tabs-5")></li>
+                <li id = BotonRegistro><input type="button" value="Registro" onclick=tabs.loadPage("#tabs-6")></li>
+                <li id = BotonLoggeo><input type="button" value="Loggeo" onclick=tabs.loadPage("#tabs-7")></li>
+                <li id = BotonAdmin><input type="button" value="Usuarios" onclick=tabs.loadPage("#tabs-8")></li>
+                <li id = BotonDeslog><input type="button" value="Deslogeo" onclick=tabs.loadPage("#tabs-9")></li>
             </ul>
         </nav>
     </header>
-
     <div id="tabs-1">
         <section>
             <h2>Bienvenidos a este espacio libre de sueño</h2>
@@ -349,7 +350,7 @@
                     <li><label>Fecha Nacimiento: <input id=fechanacimientoRegistro type="date" name="fecha"></label></li>
                     <li><label>Contraseña: <input id=contraseñaRegistro type="password" name="contraseña"></label></li>
                     <li><label>Repita Contraseña: <input id=recontraseñaRegistro type="password" name="ReContraseña"></label></li>
-                    <li><input type="button" value="Registro" onclick=usuarios.registerUserFromTabs()></li>
+                    <li><input type="button" value="Registro" onclick=tabs.registerUserFromTabs()></li>
                 </ul>
             </form>
         </section>
@@ -362,16 +363,41 @@
                     <form>
                         <label>Correo: <input id=correoLoggeo type="text" name="correo"><br></label>
                         <label>Contraseña: <input id=contraseñaLoggeo type="password" name="contraseña"></label>
-                        <input type="button" value="Login" onclick=usuarios.logUserFromTabs()>
+                        <input type="button" value="Login" onclick=tabs.logUserFromTabs()>
                     </form>
                 </ul>
             </form>
         </section>
     </div>
+    <div id="tabs-8">
+        <section>
+            <h2>Usuarios Existentes</h2>
+            <table id=table class="egt">
+                <tr>
+
+                    <th>Nombre</th>
+
+                    <th>Apellidos</th>
+
+                    <th>Correo</th>
+
+                    <th>Nacimiento</th>
+
+                    <th>Saldo</th>
+
+                    <th>Clase Usuario</th>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div id="tabs-9">
+        <form>
+            <input type="button" value="DesLoggearse" onclick=tabs.deslogUserFromTabs()>
+        </form>
+    </div>
 </main>
 
 <script src="Funciones.js"></script>
 <script src="Textrack/VideoTextrack.js"></script>
-<script src="Usuarios/Usuarios.js"></script>
 </body>
 </html>
