@@ -1,0 +1,94 @@
+html{
+    background-image: url(../Htmls/util/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+@media screen and (max-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (max-width:1024px) and (min-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (min-width:1024px) {
+    /* reglas CSS */
+}
+head {
+    background-color: DarkGoldenRod;
+}
+h1 {
+    background-color:Sienna;
+    color: PaleGoldenRod;
+    text-transform: uppercase;
+    padding: 50px 40px;
+    text-align: center;
+
+    border-radius: 92px 92px 92px 92px;
+    -moz-border-radius: 92px 92px 92px 92px;
+    -webkit-border-radius: 92px 92px 92px 92px;
+    border: 0px double #000000;
+}
+h2,h3,h4,h5 {
+    background-color:Sienna;
+    color: white;
+    text-align: center;
+    width: fit-content;
+
+    border-radius: 92px 92px 92px 92px;
+    -moz-border-radius: 92px 92px 92px 92px;
+    -webkit-border-radius: 92px 92px 92px 92px;
+    border: 0px double #000000;
+
+}
+body {
+    font: 400 15px Tahoma, sans-serif;
+    line-height: 1.8;
+    color: GhostWhite;
+
+
+}
+section {
+    margin: 1rem auto;
+    width:100%;
+    max-width:960px;
+    column-count: 3;
+    -webkit-column-span:all;
+    column-span:all;
+    break-inside: avoid;
+    page-break-inside: avoid;
+
+}
+p{
+    background-color: bisque;
+    background-size: contain;
+    color: black;
+    text-align: justify;
+    display: compact;
+}
+img {
+    width: 300px;
+    height: 300px; }
+/* Móviles en horizontal o tablets en vertical */
+ div section{
+    width: 150px;
+    height: 100px;
+}
+
+
+@media (max-width: 900px) {
+    section {
+        columns:2;
+    }
+
+}
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+}
+/* Móviles en vertical */
+
+@media (max-width: 600px) {
+    section {
+        columns: 1;
+    }
+}

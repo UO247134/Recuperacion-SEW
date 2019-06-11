@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Miguel Guimarey">
+    <meta name="date" content="2019-06-04T11:45:37+00:00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Registro"/>
+    <link rel="stylesheet" type="text/css" href="../../Css/estilo.css"/>
+    <title>Registro</title>
+</head>
+<body>
+<h1>El cafeinomano desvelado </h1>
+<main>
+    <section>
+        <h2>Registrese como usuario</h2>
+        <form>
+            <label>Nombre: <input id=nombre type="text" name="nombre"></label>
+            <label>Apellido: <input id=apellido type="text" name="apellido"></label>
+            <label>Correo: <input id=correo type="text" name="correo"></label>
+            <label>Fecha Nacimiento: <input id=fechanacimiento type="date" name="fecha"></label>
+            <label>Contraseña: <input id=contraseña type="password" name="contraseña"></label>
+            <label>Repita Contraseña: <input id=recontraseña type="password" name="ReContraseña"></label>
+            <input type="button" value="Registro" onclick=usuarios.registerUser()>
+        </form>
+    </section>
+</main>
+<script src="Usuarios.js"></script>
+</body>
+</html>
